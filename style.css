@@ -60,7 +60,7 @@
   padding: 10px;
   border: 1px solid #ddd;
   min-height: 200px;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 16px;
 }
 
@@ -69,16 +69,17 @@ label {
   font-weight: bold;
 }
 
-#customTemplateContainer {
-  margin-top: 10px;
-}
-
-#customTemplateInput {
-  margin-right: 10px;
+.save-template-button {
   padding: 5px;
-  font-size: 14px;
+  font-size: 16px;
+  background-color: blue;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-#saveCustomTemplate {
-  font-size: 14px;
+.save-template-button:hover {
+  background-color: darkblue;
 }

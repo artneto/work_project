@@ -33,7 +33,6 @@
         <i class="fa-solid fa-strikethrough"></i>
       </button>
      
-
       <!-- List -->
       <button id="insertOrderedList" class="option-button">
         <div class="fa-solid fa-list-ol"></div>
@@ -85,19 +84,20 @@
       <!-- Templates -->
       <select id="textTemplate" class="adv-option-button">
         <option value="">Select a Template</option>
-        <option value="<strong>Template 1</strong>">Template 1</option>
-        <option value="<em>Template 2</em>">Template 2</option>
-        <option value="<u>Template 3</u>">Template 3</option>
+        <option value="template1">Template 1</option>
+        <option value="template2">Template 2</option>
+        <option value="template3">Template 3</option>
       </select>
-
-      <!-- Custom Template -->
-      <div id="customTemplateContainer">
-        <input type="text" id="customTemplateInput" placeholder="Enter custom template" />
-        <button id="saveCustomTemplate" class="option-button">Save</button>
-      </div>
+      <button id="saveTemplateButton" class="option-button template-button save-template-button">
+        Save Template
+      </button>
     </div>
-    <div id="text-input" contenteditable="true"></div>
+    <div class="editor">
+      <div id="toolbar" class="toolbar"></div>
+      <div id="text-input" contenteditable="true"></div>
+    </div>
   </div>
+
   <!-- Script -->
   <script src="script.js"></script>
 </body>
