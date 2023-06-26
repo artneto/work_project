@@ -32,12 +32,7 @@
       <button id="strikethrough" class="option-button format">
         <i class="fa-solid fa-strikethrough"></i>
       </button>
-      <button id="superscript" class="option-button script">
-        <i class="fa-solid fa-superscript"></i>
-      </button>
-      <button id="subscript" class="option-button script">
-        <i class="fa-solid fa-subscript"></i>
-      </button>
+     
 
       <!-- List -->
       <button id="insertOrderedList" class="option-button">
@@ -61,26 +56,6 @@
       </button>
       <button id="unlink" class="option-button">
         <i class="fa fa-unlink"></i>
-      </button>
-
-      <!-- Alignment -->
-      <button id="justifyLeft" class="option-button align">
-        <i class="fa-solid fa-align-left"></i>
-      </button>
-      <button id="justifyCenter" class="option-button align">
-        <i class="fa-solid fa-align-center"></i>
-      </button>
-      <button id="justifyRight" class="option-button align">
-        <i class="fa-solid fa-align-right"></i>
-      </button>
-      <button id="justifyFull" class="option-button align">
-        <i class="fa-solid fa-align-justify"></i>
-      </button>
-      <button id="indent" class="option-button spacing">
-        <i class="fa-solid fa-indent"></i>
-      </button>
-      <button id="outdent" class="option-button spacing">
-        <i class="fa-solid fa-outdent"></i>
       </button>
 
       <!-- Headings -->
@@ -108,11 +83,22 @@
       </div>
 
       <!-- Templates -->
-      <select id="textTemplate" class="adv-option-button"></select>
+      <select id="textTemplate" class="adv-option-button">
+        <option value="">Select a Template</option>
+        <option value="<strong>Template 1</strong>">Template 1</option>
+        <option value="<em>Template 2</em>">Template 2</option>
+        <option value="<u>Template 3</u>">Template 3</option>
+      </select>
+
+      <!-- Custom Template -->
+      <div id="customTemplateContainer">
+        <input type="text" id="customTemplateInput" placeholder="Enter custom template" />
+        <button id="saveCustomTemplate" class="option-button">Save</button>
+      </div>
     </div>
     <div id="text-input" contenteditable="true"></div>
   </div>
-  <!--Script-->
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>

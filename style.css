@@ -1,87 +1,84 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #338cf4;
-}
-
 .container {
-  background-color: #ffffff;
-  width: 90%;
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 50px 30px;
-  border-radius: 10px;
-  box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .options {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 15px;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-button {
-  height: 28px;
-  width: 28px;
-  display: grid;
-  place-items: center;
-  border-radius: 3px;
+.option-button {
+  padding: 5px;
+  font-size: 16px;
+  background-color: #f0f0f0;
   border: none;
-  background-color: #ffffff;
-  outline: none;
-  color: #020929;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-select {
-  padding: 7px;
-  border: 1px solid #020929;
-  border-radius: 3px;
+.format {
+  font-weight: bold;
 }
 
-.options label,
-.options select {
-  font-family: "Poppins", sans-serif;
+.align {
+  display: flex;
+  align-items: center;
+}
+
+.spacing {
+  margin-left: 10px;
+}
+
+.adv-option-button {
+  padding: 5px;
+  font-size: 14px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .input-wrapper {
   display: flex;
   align-items: center;
-  gap: 8px;
+  margin-right: 10px;
 }
 
-input[type="color"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  width: 40px;
-  height: 28px;
-  border: none;
-  cursor: pointer;
+.input-wrapper input {
+  margin-right: 5px;
 }
 
-input[type="color"]::-webkit-color-swatch {
-  border-radius: 15px;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
-}
-
-input[type="color"]::-moz-color-swatch {
-  border-radius: 15px;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
+.template-button {
+  margin-left: 10px;
 }
 
 #text-input {
-  margin-top: 10px;
-  border: 1px solid #dddddd;
-  padding: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
   min-height: 200px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
-.active {
-  background-color: #e0e9ff;
+label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#customTemplateContainer {
+  margin-top: 10px;
+}
+
+#customTemplateInput {
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+#saveCustomTemplate {
+  font-size: 14px;
 }
