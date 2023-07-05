@@ -18,83 +18,85 @@
 </head>
 <body>
   <div class="container">
-    <div class="options">
-      <!-- Text Format -->
-      <button id="bold" class="option-button format">
-        <i class="fa-solid fa-bold"></i>
-      </button>
-      <button id="italic" class="option-button format">
-        <i class="fa-solid fa-italic"></i>
-      </button>
-      <button id="underline" class="option-button format">
-        <i class="fa-solid fa-underline"></i>
-      </button>
-      <button id="strikethrough" class="option-button format">
-        <i class="fa-solid fa-strikethrough"></i>
-      </button>
-     
-      <!-- List -->
-      <button id="insertOrderedList" class="option-button">
-        <div class="fa-solid fa-list-ol"></div>
-      </button>
-      <button id="insertUnorderedList" class="option-button">
-        <i class="fa-solid fa-list"></i>
-      </button>
-
-      <!-- Undo/Redo -->
-      <button id="undo" class="option-button">
-        <i class="fa-solid fa-rotate-left"></i>
-      </button>
-      <button id="redo" class="option-button">
-        <i class="fa-solid fa-rotate-right"></i>
-      </button>
-
-      <!-- Link -->
-      <button id="createLink" class="adv-option-button">
-        <i class="fa fa-link"></i>
-      </button>
-      <button id="unlink" class="option-button">
-        <i class="fa fa-unlink"></i>
-      </button>
-
-      <!-- Headings -->
-      <select id="formatBlock" class="adv-option-button">
-        <option value="H1">H1</option>
-        <option value="H2">H2</option>
-        <option value="H3">H3</option>
-        <option value="H4">H4</option>
-        <option value="H5">H5</option>
-        <option value="H6">H6</option>
-      </select>
-
-      <!-- Font -->
-      <select id="fontName" class="adv-option-button"></select>
-      <select id="fontSize" class="adv-option-button"></select>
-
-      <!-- Color -->
-      <div class="input-wrapper">
-        <input type="color" id="foreColor" class="adv-option-button" />
-        <label for="foreColor">Font Color</label>
+    <div class="options-wrapper">
+      <div class="options">
+        <!-- Text Format -->
+        <button id="bold" class="option-button format">
+          <i class="fa-solid fa-bold"></i>
+        </button>
+        <button id="italic" class="option-button format">
+          <i class="fa-solid fa-italic"></i>
+        </button>
+        <button id="underline" class="option-button format">
+          <i class="fa-solid fa-underline"></i>
+        </button>
+        <button id="strikethrough" class="option-button format">
+          <i class="fa-solid fa-strikethrough"></i>
+        </button>
+       
+        <!-- List -->
+        <button id="insertOrderedList" class="option-button">
+          <div class="fa-solid fa-list-ol"></div>
+        </button>
+        <button id="insertUnorderedList" class="option-button">
+          <i class="fa-solid fa-list"></i>
+        </button>
+  
+        <!-- Undo/Redo -->
+        <button id="undo" class="option-button">
+          <i class="fa-solid fa-rotate-left"></i>
+        </button>
+        <button id="redo" class="option-button">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
+  
+        <!-- Link -->
+        <button id="createLink" class="adv-option-button">
+          <i class="fa fa-link"></i>
+        </button>
+        <button id="unlink" class="option-button">
+          <i class="fa fa-unlink"></i>
+        </button>
+  
+        <!-- Headings -->
+        <select id="formatBlock" class="adv-option-button">
+          <option value="H1">H1</option>
+          <option value="H2">H2</option>
+          <option value="H3">H3</option>
+          <option value="H4">H4</option>
+          <option value="H5">H5</option>
+          <option value="H6">H6</option>
+        </select>
+  
+        <!-- Font -->
+        <select id="fontName" class="adv-option-button"></select>
+        <select id="fontSize" class="adv-option-button"></select>
+  
+        <!-- Color -->
+        <div class="input-wrapper">
+          <input type="color" id="foreColor" class="adv-option-button" />
+          <label for="foreColor">Font Color</label>
+        </div>
+        <div class="input-wrapper">
+          <input type="color" id="backColor" class="adv-option-button" />
+          <label for="backColor">Highlight Color</label>
+        </div>
+  
+        <!-- Templates -->
+        <select id="textTemplate" class="adv-option-button">
+          <option value="">Select a Template</option>
+          <option value="template1">Template 1</option>
+          <option value="template2">Template 2</option>
+          <option value="template3">Template 3</option>
+        </select>
+        <button id="saveTemplateButton" class="option-button template-button save-template-button">
+          Save Template
+        </button>
       </div>
-      <div class="input-wrapper">
-        <input type="color" id="backColor" class="adv-option-button" />
-        <label for="backColor">Highlight Color</label>
+      <div class="editor">
+        <div id="toolbar" class="toolbar"></div>
+        <div id="text-input" contenteditable="true"></div>
       </div>
-
-      <!-- Templates -->
-      <select id="textTemplate" class="adv-option-button">
-        <option value="">Select a Template</option>
-        <option value="template1">Template 1</option>
-        <option value="template2">Template 2</option>
-        <option value="template3">Template 3</option>
-      </select>
-      <button id="saveTemplateButton" class="option-button template-button save-template-button">
-        Save Template
-      </button>
-    </div>
-    <div class="editor">
-      <div id="toolbar" class="toolbar"></div>
-      <div id="text-input" contenteditable="true"></div>
     </div>
   </div>
 

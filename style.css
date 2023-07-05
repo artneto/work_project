@@ -4,6 +4,13 @@
   padding: 20px;
 }
 
+.options-wrapper {
+  background-color: #ddd;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
 .options {
   display: flex;
   flex-wrap: wrap;
