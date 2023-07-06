@@ -1,92 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #338cf4;
+}
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  background-color: #ffffff;
+  width: 90vmin;
+  padding: 50px 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 10px;
+  box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
 }
-
-.options-wrapper {
-  background-color: #ddd;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
 .options {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.option-button {
-  padding: 5px;
-  font-size: 16px;
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.format {
-  font-weight: bold;
-}
-
-.align {
-  display: flex;
   align-items: center;
+  gap: 15px;
 }
-
-.spacing {
-  margin-left: 10px;
-}
-
-.adv-option-button {
-  padding: 5px;
-  font-size: 14px;
-  background-color: #f0f0f0;
+button {
+  height: 28px;
+  width: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  background-color: #ffffff;
+  outline: none;
+  color: #020929;
 }
-
+select {
+  padding: 7px;
+  border: 1px solid #020929;
+  border-radius: 3px;
+}
+.options label,
+.options select {
+  font-family: "Poppins", sans-serif;
+}
 .input-wrapper {
   display: flex;
   align-items: center;
-  margin-right: 10px;
+  gap: 8px;
 }
-
-.input-wrapper input {
-  margin-right: 5px;
-}
-
-.template-button {
-  margin-left: 10px;
-}
-
-#text-input {
-  padding: 10px;
-  border: 1px solid #ddd;
-  min-height: 200px;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-}
-
-label {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.save-template-button {
-  padding: 5px;
-  font-size: 16px;
-  background-color: blue;
-  color: white;
-  font-family: "Poppins", sans-serif;
+input[type="color"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 40px;
+  height: 28px;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
 }
-
-.save-template-button:hover {
-  background-color: darkblue;
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 15px;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
+}
+input[type="color"]::-moz-color-swatch {
+  border-radius: 15px;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
+}
+#text-input {
+  margin-top: 10px;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  height: 50vh;
+}
+.active {
+  background-color: #e0e9ff;
 }
