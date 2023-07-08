@@ -122,7 +122,7 @@ textTemplate.addEventListener("change", () => {
     modifyText(
       "insertHTML",
       false,
-      "<strong>[Demand], the query is looking for [explain intent]. No burst event as there is no news about this query. According to the session, there is no reliable data for this query. [explain the ranks] R1 R2 R3 R4 Both sides do not satisfy the query. Therefore, there is no better side. Score [score].</strong>"
+      "<p>[Demand], the query is looking for [explain intent]</p>. <p>No burst event as there is no news about this query.</p><p> According to the session, there is no reliable data for this query.</p><p> [explain the ranks] R1 R2 R3 R4 Both sides do not satisfy the query. </p><p>Therefore, there is no better side. Score [score].</p>"
     );
   } else if (selectedTemplate === "template2") {
     modifyText(
@@ -133,7 +133,7 @@ textTemplate.addEventListener("change", () => {
     modifyText(
       "insertHTML",
       false,
-      "[Specify Demand]. Query is looking for [describe]. According to Session tool: Rank 1 has [%ctr] and [stric caliber] Rank 2 has [%ctr] and [stric caliber] Rank 3 has [%ctr] and [stric caliber] Rank 4 has [%ctr] and [stric caliber] All the ranks on top 4 recall videos query is looking for, all have full text matching and content relevance to query, all satisfy query demand, 3pts."
+      "<p>[Specify Demand]. Query is looking for [describe].</p><p> According to Session tool:</p><p> Rank 1 has [%ctr] and [stric caliber] </p><p>Rank 2 has [%ctr] and [stric caliber]</p><p> Rank 3 has [%ctr] and [stric caliber]</p><p> Rank 4 has [%ctr] and [stric caliber]</p><p> All the ranks on top 4 recall videos query is looking for, all have full text matching and content relevance to query, all satisfy query demand, 3pts.</p>"
     );
   } else if (selectedTemplate === "template3") {
     modifyText(
@@ -144,12 +144,25 @@ textTemplate.addEventListener("change", () => {
     modifyText(
       "insertHTML",
       false,
-      "[Demand], the query is looking for content about [user name]. According to the session, Rank 1 recalled usercard with [%ctr] and [stric calliber], user recalled has a big card and fully matches with demand. Diff on the rank 2, but videos recalled on both sides belong to the main demand. Therefore, there is no better side. Score: 0."
+      "<p>[Demand], the query is looking for content about [user name].</p><p> According to the session, Rank 1 recalled usercard with [%ctr] and [stric calliber], user recalled has a big card and fully matches with demand.</p><p> Diff on the rank 2, but videos recalled on both sides belong to the main demand.</p><p> Therefore, there is no better side. Score: 0.</p>"
     );
   } else {
     writingArea.innerHTML = "";
   }
 });
+
+// Save Template
+let saveTemplateButton = document.getElementById("saveTemplate");
+saveTemplateButton.addEventListener("click", saveTemplate);
+
+const saveTemplate = () => {
+  let templateName = prompt("Enter a name for the template:");
+  let option = document.createElement("option");
+  option.value = templateName;
+  option.innerHTML = templateName;
+  let templateDropdown = document.getElementById("textTemplate");
+  templateDropdown.appendChild(option);
+};
 
 // Initialize the editor
 window.onload = initializer();
