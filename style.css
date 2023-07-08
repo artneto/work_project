@@ -34,6 +34,21 @@ button {
   outline: none;
   color: #020929;
 }
+button#save-templates {
+  height: 28px;
+  width: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
+  border: none;
+  background-color: #338cf4;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  color: #ffffff;
+}
+button#save-templates:focus {
+  background-color: #000000;
+}
 select {
   padding: 7px;
   border: 1px solid #020929;
