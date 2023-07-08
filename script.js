@@ -152,17 +152,17 @@ textTemplate.addEventListener("change", () => {
 });
 
 // Save Template
-let saveTemplateButton = document.getElementById("saveTemplate");
+let saveTemplateButton = document.getElementById("saveTemplateButton");
 saveTemplateButton.addEventListener("click", saveTemplate);
 
-const saveTemplate = () => {
+function saveTemplate() {
   let templateName = prompt("Enter a name for the template:");
   let option = document.createElement("option");
   option.value = templateName;
   option.innerHTML = templateName;
   let templateDropdown = document.getElementById("textTemplate");
   templateDropdown.appendChild(option);
-};
+}
 
 // Initialize the editor
-window.onload = initializer();
+window.onload = initializer;
