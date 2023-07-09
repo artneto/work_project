@@ -119,35 +119,13 @@ const highlighterRemover = (className) => {
 textTemplate.addEventListener("change", () => {
   let selectedTemplate = textTemplate.value;
   if (selectedTemplate === "template1") {
-    modifyText(
-      "insertHTML",
-      false,
-      "<p>[Demand], the query is looking for [explain intent]</p>. <p>No burst event as there is no news about this query.</p><p> According to the session, there is no reliable data for this query.</p><p> [explain the ranks] R1 R2 R3 R4 Both sides do not satisfy the query. </p><p>Therefore, there is no better side. Score [score].</p>"
-    );
+    writingArea.value = "[Demand], the query is looking for [explain intent]. No burst event as there is no news about this query. According to the session, there is no reliable data for this query. [explain the ranks] R1 R2 R3 R4 Both sides do not satisfy the query. Therefore, there is no better side. Score [score].";
   } else if (selectedTemplate === "template2") {
-    modifyText(
-      "insertHTML",
-      false,
-      "<em>Content of Template 2</em>"
-    );
-    modifyText(
-      "insertHTML",
-      false,
-      "<p>[Specify Demand]. Query is looking for [describe].</p><p> According to Session tool:</p><p> Rank 1 has [%ctr] and [stric caliber] </p><p>Rank 2 has [%ctr] and [stric caliber]</p><p> Rank 3 has [%ctr] and [stric caliber]</p><p> Rank 4 has [%ctr] and [stric caliber]</p><p> All the ranks on top 4 recall videos query is looking for, all have full text matching and content relevance to query, all satisfy query demand, 3pts.</p>"
-    );
+    writingArea.value = "Content of Template 2\n\n[Specify Demand]. Query is looking for [describe]. According to Session tool:\n\nRank 1 has [%ctr] and [stric caliber].\nRank 2 has [%ctr] and [stric caliber].\nRank 3 has [%ctr] and [stric caliber].\nRank 4 has [%ctr] and [stric caliber].\n\nAll the ranks on top 4 recall videos query is looking for, all have full text matching and content relevance to query, all satisfy query demand, 3pts.";
   } else if (selectedTemplate === "template3") {
-    modifyText(
-      "insertHTML",
-      false,
-      "<u>Content of Template 3</u>"
-    );
-    modifyText(
-      "insertHTML",
-      false,
-      "<p>[Demand], the query is looking for content about [user name].</p><p> According to the session, Rank 1 recalled usercard with [%ctr] and [stric calliber], user recalled has a big card and fully matches with demand.</p><p> Diff on the rank 2, but videos recalled on both sides belong to the main demand.</p><p> Therefore, there is no better side. Score: 0.</p>"
-    );
+    writingArea.value = "Content of Template 3\n\n[Demand], the query is looking for content about [user name]. According to the session, Rank 1 recalled usercard with [%ctr] and [stric calliber], user recalled has a big card and fully matches with demand. Diff on the rank 2, but videos recalled on both sides belong to the main demand. Therefore, there is no better side. Score: 0.";
   } else {
-    writingArea.innerHTML = "";
+    writingArea.value = "";
   }
 });
 
