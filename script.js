@@ -1,5 +1,5 @@
-let optionsButtons = document.querySelectorAll(".option-button");
-let advancedOptionButton = document.querySelectorAll(".adv-option-button");
+let optionButtons = document.querySelectorAll(".option-button");
+let advancedOptionButtons = document.querySelectorAll(".adv-option-button");
 let fontName = document.getElementById("fontName");
 let fontSizeRef = document.getElementById("fontSize");
 let writingArea = document.getElementById("text-input");
@@ -57,14 +57,14 @@ const modifyText = (command, defaultUi, value) => {
 };
 
 // For basic operations which don't need value parameter
-optionsButtons.forEach((button) => {
+optionButtons.forEach((button) => {
   button.addEventListener("click", () => {
     modifyText(button.id, false, null);
   });
 });
 
 // Options that require value parameter (e.g colors, fonts)
-advancedOptionButton.forEach((button) => {
+advancedOptionButtons.forEach((button) => {
   button.addEventListener("change", () => {
     modifyText(button.id, false, button.value);
   });
