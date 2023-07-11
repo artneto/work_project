@@ -121,9 +121,27 @@ textTemplate.addEventListener("change", () => {
   if (selectedTemplate === "template1") {
     writingArea.value = "[Demand], the query is looking for [explain intent]. No burst event as there is no news about this query. According to the session, there is no reliable data for this query. [explain the ranks] R1 R2 R3 R4 Both sides do not satisfy the query. Therefore, there is no better side. Score [score].";
   } else if (selectedTemplate === "template2") {
-    writingArea.value = "Content of Template 2\n\n[Specify Demand]. Query is looking for [describe]. According to Session tool:\n\nRank 1 has [%ctr] and [stric caliber].\nRank 2 has [%ctr] and [stric caliber].\nRank 3 has [%ctr] and [stric caliber].\nRank 4 has [%ctr] and [stric caliber].\n\nAll the ranks on top 4 recall videos query is looking for, all have full text matching and content relevance to query, all satisfy query demand, 3pts.";
+    modifyText(
+      "insertHTML",
+      false,
+      "<em>Content of Template 2</em>"
+    );
+    modifyText(
+      "insertHTML",
+      false,
+      "[Specify Demand]. Query is looking for [describe]. According to Session tool: Rank 1 has [%ctr] and [stric caliber] Rank 2 has [%ctr] and [stric caliber] Rank 3 has [%ctr] and [stric caliber] Rank 4 has [%ctr] and [stric caliber] All the ranks on top 4 recall videos query is looking for, all have full text matching and content relevance to query, all satisfy query demand, 3pts."
+    );
   } else if (selectedTemplate === "template3") {
-    writingArea.value = "Content of Template 3\n\n[Demand], the query is looking for content about [user name]. According to the session, Rank 1 recalled usercard with [%ctr] and [stric calliber], user recalled has a big card and fully matches with demand. Diff on the rank 2, but videos recalled on both sides belong to the main demand. Therefore, there is no better side. Score: 0.";
+    modifyText(
+      "insertHTML",
+      false,
+      "<u>Content of Template 3</u>"
+    );
+    modifyText(
+      "insertHTML",
+      false,
+      "[Demand], the query is looking for content about [user name]. According to the session, Rank 1 recalled usercard with [%ctr] and [stric calliber], user recalled has a big card and fully matches with demand. Diff on the rank 2, but videos recalled on both sides belong to the main demand. Therefore, there is no better side. Score: 0."
+    );
   } else {
     writingArea.value = "";
   }
