@@ -119,7 +119,11 @@ const highlighterRemover = (className) => {
 textTemplate.addEventListener("change", () => {
   let selectedTemplate = textTemplate.value;
   if (selectedTemplate === "template1") {
-    writingArea.value = "[Demand], the query is looking for [explain intent]. No burst event as there is no news about this query. According to the session, there is no reliable data for this query. [explain the ranks] R1 R2 R3 R4 Both sides do not satisfy the query. Therefore, there is no better side. Score [score].";
+    modifyText(
+      "insertHTML",
+      false,
+      "<p>[Demand], the query is looking for [explain intent].</p><p> No burst event as there is no news about this query.</p><p> According to the session, there is no reliable data for this query. </p><p>[explain the ranks] R1 R2 R3 R4 Both sides do not satisfy the query. </p>Therefore, there is no better side. Score [score].</strong>"
+    );
   } else if (selectedTemplate === "template2") {
     modifyText(
       "insertHTML",
