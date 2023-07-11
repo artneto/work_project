@@ -129,7 +129,7 @@ textTemplate.addEventListener("change", () => {
     modifyText(
       "insertHTML",
       false,
-      "[Specify Demand]. Query is looking for [describe]. According to Session tool: Rank 1 has [%ctr] and [stric caliber] Rank 2 has [%ctr] and [stric caliber] Rank 3 has [%ctr] and [stric caliber] Rank 4 has [%ctr] and [stric caliber] All the ranks on top 4 recall videos query is looking for, all have full text matching and content relevance to query, all satisfy query demand, 3pts."
+      "[Specify Demand]. Query is looking for [describe].<p> According to Session tool: Rank 1 has [%ctr] and [stric caliber]</p><p> Rank 2 has [%ctr] and [stric caliber] </p><p>Rank 3 has [%ctr] and [stric caliber]</p><p> Rank 4 has [%ctr] and [stric caliber] </p>All the ranks on top 4 recall videos query is looking for, all have full text matching and content relevance to query, all satisfy query demand, 3pts."
     );
   } else if (selectedTemplate === "template3") {
     modifyText(
@@ -140,7 +140,7 @@ textTemplate.addEventListener("change", () => {
     modifyText(
       "insertHTML",
       false,
-      "[Demand], the query is looking for content about [user name]. According to the session, Rank 1 recalled usercard with [%ctr] and [stric calliber], user recalled has a big card and fully matches with demand. Diff on the rank 2, but videos recalled on both sides belong to the main demand. Therefore, there is no better side. Score: 0."
+      "[Demand], the query is looking for content about [user name].<p> According to the session, Rank 1 recalled usercard with [%ctr] and [stric calliber], user recalled has a big card and fully matches with demand.</p><p> Diff on the rank 2, but videos recalled on both sides belong to the main demand. </p><p>Therefore, there is no better side. Score: 0.</p>"
     );
   } else {
     writingArea.value = "";
