@@ -118,33 +118,71 @@ const highlighterRemover = (className) => {
 // Add event listener for template selection
 textTemplate.addEventListener("change", () => {
   let selectedTemplate = textTemplate.value;
-  if (selectedTemplate === "template1") {
+  if (selectedTemplate === "General demand with unreliable data and better side") {
     modifyText(
       "insertHTML",
       false,
-      "<p>[Demand], the query is looking for [explain intent].</p><p> No burst event as there is no news about this query.</p><p> According to the session, there is no reliable data for this query. </p><p>[explain the ranks] R1 R2 R3 R4 Both sides do not satisfy the query. </p>Therefore, there is no better side. Score [score].</strong>"
-    );
-  } else if (selectedTemplate === "template2") {
-    modifyText(
-      "insertHTML",
-      false,
-      "<em>Content of Template 2</em>"
+      "<em>General demand with unreliable data and better side</em>"
     );
     modifyText(
       "insertHTML",
       false,
-      "[Specify Demand]. Query is looking for [describe].<p> According to Session tool: Rank 1 has [%ctr] and [stric caliber]</p><p> Rank 2 has [%ctr] and [stric caliber] </p><p>Rank 3 has [%ctr] and [stric caliber]</p><p> Rank 4 has [%ctr] and [stric caliber] </p>All the ranks on top 4 recall videos query is looking for, all have full text matching and content relevance to query, all satisfy query demand, 3pts."
+      "<p>General video demand for [Query Translation].</p> Query is looking for [query intent] Data is unreliable on Session. <p>Diff on [rank number]:</p> Side A recalled a video about [video description], while side B recalled a video about [video description]. <p>Therefore, [Side] is better as [reason].</p>"
     );
-  } else if (selectedTemplate === "template3") {
+  } else if (selectedTemplate === "General demand with unreliable data and no diff") {
     modifyText(
       "insertHTML",
       false,
-      "<u>Content of Template 3</u>"
+      "<em>General demand with unreliable data and no diff</em>"
     );
     modifyText(
       "insertHTML",
       false,
-      "[Demand], the query is looking for content about [user name].<p> According to the session, Rank 1 recalled usercard with [%ctr] and [stric calliber], user recalled has a big card and fully matches with demand.</p><p> Diff on the rank 2, but videos recalled on both sides belong to the main demand. </p><p>Therefore, there is no better side. Score: 0.</p>"
+      "<p>General video demand for [Query Translation].</p> Query is looking for [query intent] <p>Data is unreliable on Session. Diff on [rank number]:</p> Side A recalled a video about [video description], while side B recalled a video about [video description]. <p>Therefore, both sides are equal as [reason].</p>"
+    );
+  } else if (selectedTemplate === "Video with no main demand and better side") {
+    modifyText(
+      "insertHTML",
+      false,
+      "<u>Video with no main demand and better side</u>"
+    );
+    modifyText(
+      "insertHTML",
+      false,
+      "<p>General video demand for [Query Translation]. Query is looking for [query intent]</p> According to Session, there is no main demand. Diff on [rank number]: <p>Side A recalled a video about [video description], while side B recalled a video about [video description].</p> Therefore, [Side] is better as [reason]."
+    );
+  } else if (selectedTemplate === "Video with no main demand and no diff") {
+    modifyText(
+      "insertHTML",
+      false,
+      "<u>Video with no main demand and no diff</u>"
+    );
+    modifyText(
+      "insertHTML",
+      false,
+      "<p>General video demand for [Query Translation]. Query is looking for [query intent] According to Session, there is no main demand.</p>Diff on [rank number]: <p>Side A recalled a video about [video description], while side B recalled a video about [video description]. </p>Therefore, both sides are equal as [reason]."
+    );
+  } else if (selectedTemplate === "Main demand video with better side") {
+    modifyText(
+      "insertHTML",
+      false,
+      "<u>Main demand video with better side</u>"
+    );
+    modifyText(
+      "insertHTML",
+      false,
+      "<p>Video demand for [Query Translation]. Query is looking for [query intent] </p>According to Session, doc ID XXXX is the main demand with CTR xxx.Diff on [rank number]:<p> Side A recalled a video about [video description], while side B recalled a video about [video description]. </p>Therefore, [Side] is better as [reason]."
+    );
+  } else if (selectedTemplate === "Main demand video with no diff") {
+    modifyText(
+      "insertHTML",
+      false,
+      "<u>Main demand video with no diff</u>"
+    );
+    modifyText(
+      "insertHTML",
+      false,
+      "<p>Video demand for [Query Translation]. Query is looking for [query intent] According to Session, doc ID XXXX is the main demand with CTR xxx. Diff on [rank number]:<p> Side A recalled a video about [video description], while side B recalled a video about [video description]. </p>Therefore, both sides are equal as [reason]."
     );
   } else {
     writingArea.value = "";
