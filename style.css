@@ -63,6 +63,35 @@ select {
   border-radius: 3px;
 }
 
+.button-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: -34px;
+}
+/*No function for Original Buttons, only for save templates*/
+.original-button {
+  height: 35px;
+  min-width: 91px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  cursor: pointer;
+  background-color:lightseagreen;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.original-button:focus {
+  background-color: #000000;
+}
+
+
 .options label,
 .options select {
   font-family: "Poppins", sans-serif;
