@@ -123,40 +123,40 @@ textTemplate.addEventListener("change", () => {
     modifyText(
       "insertHTML",
       false,
-      "<p>General video demand for [Query Translation].</p> Query is looking for [query intent] Data is unreliable on Session. <p>Diff on [rank number]:</p> Side A recalled a video about [video description], while side B recalled a video about [video description]. <p>Therefore, [Side] is better as [reason].</p>"
+      "<p>Insert text here</p>"
     );
   } else if (selectedTemplate === "template2") {
 
     modifyText(
       "insertHTML",
       false,
-      "<p>General video demand for [Query Translation].</p> Query is looking for [query intent] <p>Data is unreliable on Session. Diff on [rank number]:</p> Side A recalled a video about [video description], while side B recalled a video about [video description]. <p>Therefore, both sides are equal as [reason].</p>"
+      "<p>Insert text here</p>"
     );
   } else if (selectedTemplate === "template3") {
 
     modifyText(
       "insertHTML",
       false,
-      "<p>General video demand for [Query Translation]. Query is looking for [query intent]</p> According to Session, there is no main demand. Diff on [rank number]: <p>Side A recalled a video about [video description], while side B recalled a video about [video description].</p> Therefore, [Side] is better as [reason]."
+      "<p>Insert text here</p>"
     );
   } else if (selectedTemplate === "template4") {
     modifyText(
       "insertHTML",
       false,
-      "<p>General video demand for [Query Translation]. Query is looking for [query intent] According to Session, there is no main demand.</p>Diff on [rank number]: <p>Side A recalled a video about [video description], while side B recalled a video about [video description]. </p>Therefore, both sides are equal as [reason]."
+      "<p>Insert text here</p>"
     );
   } else if (selectedTemplate === "template5") {
     modifyText(
       "insertHTML",
       false,
-      "<p>Video demand for [Query Translation]. Query is looking for [query intent] </p>According to Session, doc ID XXXX is the main demand with CTR xxx.Diff on [rank number]:<p> Side A recalled a video about [video description], while side B recalled a video about [video description]. </p>Therefore, [Side] is better as [reason]."
+      "<p>Insert text here</p>"
     );
   } else if (selectedTemplate === "template6") {
    
     modifyText(
       "insertHTML",
       false,
-      "<p>Video demand for [Query Translation]. Query is looking for [query intent] According to Session, doc ID XXXX is the main demand with CTR xxx. Diff on [rank number]:<p> Side A recalled a video about [video description], while side B recalled a video about [video description]. </p>Therefore, both sides are equal as [reason]."
+      "<p>Insert text here</p>"
     );
   } else {
     writingArea.value = "";
